@@ -15,7 +15,7 @@ Do the following:
    1. Create a variable called votingAge and assign it a value
    2. Console log true if age is 18 or higher
 
-   HINT: no function required
+   HINT: no function requirednp
 */
 
 const votingAge = 21; 
@@ -39,7 +39,7 @@ Do the following:
 const favoriteColor = 'Red';
 const leastFavoriteColor = 'Blue';
 
-If (favoriteColor === 'Red') {
+if (favoriteColor === 'Red') {
   console.log('Bold');
 } else if (favoriteColor === 'Blue') {
   console.log('Calm');
@@ -77,7 +77,7 @@ function multiply(a, b) {
     return (a * b);
   }
 
-  console.log(multiply(2,5))
+  console.log(multiply(2,5));
 
 
 
@@ -145,7 +145,7 @@ function hungryDog(weight, age){
     return (weight * .04)
     }
     }
-    console.log (hungryDog(5, 1))
+    console.log (hungryDog(5, 8/12))
     
     /*} else if (age >= 2/12)
       return (weight * .10)
@@ -201,45 +201,39 @@ Use the game function below to do the following:
 function game(user, computer){
     /*add your code here*/
     //user and computer choices//
-    var user = prompt ("rock, paper or scissors");
-    var computer = Math.floor(Math.random() * 3); 
-    if (computer = 0) { 
-      computer = "rock";
-    }else if (computer = 1) {
-      computer =  "paper";
-    }else if (computer = 2) {
-      computer =  "scissors";
-    } 
+    //var user = prompt ("rock, paper or scissors");
+    
 
     //game results//
-    if (user === computer) {
-      return "it's a tie";
-    }
+    // if (user === computer) {
+    //   return "it's a tie";
+    // }
     
-    if (user === "scissors") {
-      if (computer === "paper")
+    if (user === "scissors" && computer === "paper") {
       return "you win!";
-    } else {
-      return "you lose!";
-    }
-
-    if (user === "paper") {
-      if (computer === "scissors")
-      return "you lose!";
-    } else {
+    } else if ( user === "paper" && computer === "rock") {
+        return "you win!";
+    } else if (user === "rock" && computer === "scissors") {
       return "you win!";
-    }
-
-    if (user === "rock") {
-      if (computer === "paper")
+    } else if ( user === "scissors" && computer === "rock" ) {
       return "you lose!";
-    } else {
-      return "you win!";
-    }
-
+    } else if (user === "paper" && computer === "scissors") {
+      return "you lose!";
+    } else if (user === "rock" && computer === "paper") {
+      return "you lose!";
+    } else 
+    return "it's a tie" 
 }
-game ()
-  
+//game ()
+
+var computer = Math.floor(Math.random() * 3); 
+if (computer === 0) { 
+  computer = "rock";
+}else if (computer === 1) {
+  computer =  "paper";
+}else if (computer === 2) {
+  computer =  "scissors";
+} 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -267,7 +261,7 @@ Using the feet function below do the following:
 */
 
 function feet(cm){
-  return (cm * 0.0328084)
+  return (cm / 30.48)
 }
 console.log (feet(100))
  
